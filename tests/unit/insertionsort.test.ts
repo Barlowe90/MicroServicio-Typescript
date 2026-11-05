@@ -1,4 +1,3 @@
-
 import { describe, expect, it } from "vitest";
 import {
   insertionSort,
@@ -31,9 +30,7 @@ describe("insertionsort", () => {
   });
 
   it("ordena elementos repetidos y negativos", () => {
-    expect(sorted([3, -1, 3, 0, -1, 2, 3])).toEqual([
-      -1, -1, 0, 2, 3, 3, 3,
-    ]);
+    expect(sorted([3, -1, 3, 0, -1, 2, 3])).toEqual([-1, -1, 0, 2, 3, 3, 3]);
   });
 
   it("ordena cuando todos los elementos son iguales", () => {
