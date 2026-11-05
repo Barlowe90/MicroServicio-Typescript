@@ -134,13 +134,15 @@ curl -X POST http://localhost:3000/api/v1/benchmark \
 
 El servicio devuelve la mediana de cinco ejecuciones en milisegundos (`timeMs`). Antes de medir, realiza una ejecución de calentamiento y genera las entradas fuera del cronómetro.
 
-Se recomienda comparar los siguientes tamaños:
+Resultados obtenidos en una sesión de pruebas local mediante peticiones a la API (mediana de cinco ejecuciones por tamaño):
 
 | Tamaño (`size`) | Tiempo (`timeMs`) |
 |---|---|
-| 100 | Pendiente de medir |
-| 1000 | Pendiente de medir |
-| 5000 | Pendiente de medir |
+| 100 | 0.0855 ms |
+| 1000 | 0.1427 ms |
+| 5000 | 3.2979 ms |
+
+Estas mediciones son orientativas y corresponden a una única petición por tamaño; no representan una media de varias sesiones ni garantizan tiempos idénticos en otros equipos.
 
 InsertionSort presenta complejidad temporal O(n²) en el caso medio, por lo que su tiempo de ejecución tiende a crecer cuadráticamente al aumentar el tamaño de una entrada aleatoria.
 
